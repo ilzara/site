@@ -2,28 +2,37 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Экология города и здоровье</title>
+    <title>Исследовательский проект</title>
 
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f0f4f5;
+            background: #f4f6f7;
         }
 
         header {
-            background: #2c7a7b;
+            background: linear-gradient(135deg, #2c7a7b, #38a169);
             color: white;
             text-align: center;
-            padding: 30px;
+            padding: 40px 20px;
+            animation: fadeDown 1s ease;
         }
 
         section {
             background: white;
             margin: 20px;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards;
         }
+
+        section:nth-child(2) { animation-delay: 0.3s; }
+        section:nth-child(3) { animation-delay: 0.6s; }
+        section:nth-child(4) { animation-delay: 0.9s; }
 
         h2 {
             color: #2c7a7b;
@@ -33,22 +42,42 @@
             width: 100%;
             padding: 10px;
             margin-top: 5px;
-            border-radius: 5px;
+            border-radius: 6px;
             border: 1px solid #ccc;
         }
 
         button {
             background: #2c7a7b;
             color: white;
-            padding: 10px;
+            padding: 12px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             margin-top: 10px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
             background: #225e5f;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -77,38 +106,19 @@
 </section>
 
 <section>
-    <h2>Результаты опроса</h2>
-    <ul>
-        <li>60% считают воздух загрязнённым</li>
-        <li>45% жалуются на здоровье</li>
-        <li>70% считают, что архитектура влияет на воздух</li>
-    </ul>
-</section>
-
-
-<section>
     <h2>Оставьте своё мнение</h2>
 
     <form action="https://formspree.io/f/mqewlvln" method="POST">
 
-        <label>Ваше имя:</label><br>
-        <input type="text" name="name" required><br><br>
+        <label>Ваше имя:</label>
+        <input type="text" name="name" required>
 
-        <label>Ваше мнение:</label><br>
-        <textarea name="message" rows="5" required></textarea><br><br>
+        <label>Ваше мнение:</label>
+        <textarea name="message" rows="5" required></textarea>
 
         <button type="submit">Отправить</button>
 
     </form>
-</section>
-
-
-<section>
-    <h2>Вывод</h2>
-    <p>
-        Архитектура города влияет на циркуляцию воздуха 
-        и здоровье людей.
-    </p>
 </section>
 
 </body>
