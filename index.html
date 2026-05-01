@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -33,6 +33,7 @@
         section:nth-child(2) { animation-delay: 0.3s; }
         section:nth-child(3) { animation-delay: 0.6s; }
         section:nth-child(4) { animation-delay: 0.9s; }
+        section:nth-child(5) { animation-delay: 1.2s; }
 
         h2 {
             color: #2c7a7b;
@@ -44,6 +45,11 @@
             margin-top: 5px;
             border-radius: 6px;
             border: 1px solid #ccc;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
         }
 
         button {
@@ -92,29 +98,47 @@
 <section>
     <h2>О проекте</h2>
     <p>
-        Этот проект посвящён изучению влияния городской архитектуры 
-        на качество воздуха и здоровье человека.
+        Данный проект направлен на изучение влияния городской архитектуры 
+        на качество атмосферного воздуха и состояние здоровья населения.
     </p>
 </section>
 
 <section>
     <h2>Проблема</h2>
     <p>
-        Плотная застройка и большое количество транспорта ухудшают 
-        качество воздуха в городе.
+        Плотная застройка, транспорт и особенности планировки города 
+        оказывают значительное влияние на циркуляцию воздуха и уровень его загрязнения.
     </p>
 </section>
 
 <section>
-    <h2>Оставьте своё мнение</h2>
+    <h2>Социологический опрос</h2>
 
     <form action="https://formspree.io/f/mqewlvln" method="POST">
 
         <label>Ваше имя:</label>
         <input type="text" name="name" required>
 
+        <label>Как вы оцениваете качество воздуха?</label>
+        <input type="radio" name="air" value="Чистый"> Чистый<br>
+        <input type="radio" name="air" value="Средний"> Средний<br>
+        <input type="radio" name="air" value="Загрязнённый"> Загрязнённый<br>
+
+        <label>Замечаете ли вы ухудшение самочувствия?</label>
+        <input type="radio" name="health" value="Да"> Да<br>
+        <input type="radio" name="health" value="Иногда"> Иногда<br>
+        <input type="radio" name="health" value="Нет"> Нет<br>
+
+        <label>Есть ли у вас проблемы с дыханием?</label>
+        <input type="radio" name="breath" value="Да"> Да<br>
+        <input type="radio" name="breath" value="Нет"> Нет<br>
+
+        <label>Чувствуете ли вы разницу в других городах?</label>
+        <input type="radio" name="other" value="Да"> Да<br>
+        <input type="radio" name="other" value="Нет"> Нет<br>
+
         <label>Ваше мнение:</label>
-        <textarea name="message" rows="5" required></textarea>
+        <textarea name="message" rows="4"></textarea>
 
         <button type="submit">Отправить</button>
 
