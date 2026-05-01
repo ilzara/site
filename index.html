@@ -111,39 +111,50 @@
     </p>
 </section>
 
+
 <section>
     <h2>Социологический опрос</h2>
+    <p style="color:#555;">Пожалуйста, ответьте на несколько вопросов:</p>
 
     <form action="https://formspree.io/f/mqewlvln" method="POST">
 
-        <label>Ваше имя:</label>
-        <input type="text" name="name" required>
+        <div style="margin-bottom:15px;">
+            <label><b>Ваше имя:</b></label>
+            <input type="text" name="name" required>
+        </div>
 
-        <label>Как вы оцениваете качество воздуха?</label>
-        <input type="radio" name="air" value="Чистый"> Чистый<br>
-        <input type="radio" name="air" value="Средний"> Средний<br>
-        <input type="radio" name="air" value="Загрязнённый"> Загрязнённый<br>
+        <div style="margin-bottom:20px;">
+            <p><b>1. Как вы оцениваете качество воздуха?</b></p>
+            <label><input type="radio" name="air" value="Чистый"> Чистый</label><br>
+            <label><input type="radio" name="air" value="Средний"> Средний</label><br>
+            <label><input type="radio" name="air" value="Загрязнённый"> Загрязнённый</label>
+        </div>
 
-        <label>Замечаете ли вы ухудшение самочувствия?</label>
-        <input type="radio" name="health" value="Да"> Да<br>
-        <input type="radio" name="health" value="Иногда"> Иногда<br>
-        <input type="radio" name="health" value="Нет"> Нет<br>
+        <div style="margin-bottom:20px;">
+            <p><b>2. Замечаете ли вы ухудшение самочувствия?</b></p>
+            <label><input type="radio" name="health" value="Да"> Да</label><br>
+            <label><input type="radio" name="health" value="Иногда"> Иногда</label><br>
+            <label><input type="radio" name="health" value="Нет"> Нет</label>
+        </div>
 
-        <label>Есть ли у вас проблемы с дыханием?</label>
-        <input type="radio" name="breath" value="Да"> Да<br>
-        <input type="radio" name="breath" value="Нет"> Нет<br>
+        <div style="margin-bottom:20px;">
+            <p><b>3. Есть ли у вас проблемы с дыханием?</b></p>
+            <label><input type="radio" name="breath" value="Да"> Да</label><br>
+            <label><input type="radio" name="breath" value="Нет"> Нет</label>
+        </div>
 
-        <label>Чувствуете ли вы разницу в других городах?</label>
-        <input type="radio" name="other" value="Да"> Да<br>
-        <input type="radio" name="other" value="Нет"> Нет<br>
+        <div style="margin-bottom:20px;">
+            <p><b>4. Чувствуете ли вы разницу в других городах?</b></p>
+            <label><input type="radio" name="other" value="Да"> Да</label><br>
+            <label><input type="radio" name="other" value="Нет"> Нет</label>
+        </div>
 
-        <label>Ваше мнение:</label>
-        <textarea name="message" rows="4"></textarea>
+        <div style="margin-bottom:15px;">
+            <label><b>Ваше мнение:</b></label>
+            <textarea name="message" rows="4" placeholder="Напишите своё мнение..."></textarea>
+        </div>
 
         <button type="submit">Отправить</button>
 
     </form>
 </section>
-
-</body>
-</html>
